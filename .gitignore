@@ -1,0 +1,12 @@
+# ===========================================================
+#  .gitignore — Repo biblioteca de tableros
+#  Solo se publica el portal (index.html).
+# ===========================================================
+
+# Ignorar TODO por defecto...
+*
+
+# ...pero permitir explicitamente lo que SI se publica:
+!.gitignore
+!README.md
+!index.html

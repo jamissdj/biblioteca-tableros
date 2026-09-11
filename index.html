@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biblioteca de Tableros — Jamis Garzón</title>
+<style>
+  :root{
+    --bg:#0f1420; --card:#1a2130; --card2:#212a3d; --text:#e8ecf3;
+    --muted:#9aa7bd; --accent:#7c5cff; --accent2:#4dd0e1; --ok:#3ecf8e;
+    --border:#2b3550;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    background:linear-gradient(135deg,#0f1420 0%,#151b2b 100%);
+    color:var(--text); min-height:100vh; padding:40px 20px;
+  }
+  .wrap{max-width:900px;margin:0 auto}
+  header{text-align:center;margin-bottom:40px}
+  header h1{font-size:2rem;font-weight:700;letter-spacing:-.5px}
+  header .sub{color:var(--muted);margin-top:8px;font-size:.95rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:20px}
+  .card{
+    background:var(--card); border:1px solid var(--border); border-radius:16px;
+    padding:24px; transition:transform .15s ease,border-color .15s ease;
+    display:flex; flex-direction:column; gap:14px;
+  }
+  .card:hover{transform:translateY(-3px);border-color:var(--accent)}
+  .card .top{display:flex;align-items:center;gap:12px}
+  .icon{
+    width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+    font-size:1.4rem;background:var(--card2);flex-shrink:0;
+  }
+  .card h2{font-size:1.15rem;font-weight:600}
+  .card .desc{color:var(--muted);font-size:.9rem;line-height:1.4;flex:1}
+  .badge{
+    display:inline-flex;align-items:center;gap:6px;font-size:.72rem;
+    color:var(--ok);background:rgba(62,207,142,.12);
+    padding:4px 10px;border-radius:20px;width:fit-content;font-weight:600;
+  }
+  .badge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--ok)}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    background:linear-gradient(135deg,var(--accent),#6a4de0);color:#fff;
+    text-decoration:none;padding:11px 16px;border-radius:10px;font-weight:600;
+    font-size:.9rem;transition:opacity .15s;
+  }
+  .btn:hover{opacity:.88}
+  .btn.repo{background:transparent;border:1px solid var(--border);color:var(--muted)}
+  .actions{display:flex;gap:10px}
+  footer{text-align:center;color:var(--muted);font-size:.8rem;margin-top:40px;line-height:1.6}
+  .note{
+    background:rgba(124,92,255,.08);border:1px solid rgba(124,92,255,.25);
+    border-radius:12px;padding:14px 18px;margin-bottom:28px;font-size:.85rem;
+    color:var(--muted);line-height:1.5;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>📊 Biblioteca de Tableros</h1>
+    <div class="sub">Tableros publicados en GitHub Pages · Liberty Latin America · Jamis Garzón</div>
+  </header>
+
+  <div class="note">
+    💡 <strong>Nota:</strong> Verifica cada enlace la primera vez. Los tableros marcados
+    “Publicado” ya tienen automatización de publicación con un clic. Comparte estas URLs
+    con tus jefes para consulta casi en tiempo real.
+  </div>
+
+  <div class="grid">
+
+    <!-- VP Report -->
+    <div class="card">
+      <div class="top">
+        <div class="icon">💰</div>
+        <div><h2>VP Report — Presupuesto</h2></div>
+      </div>
+      <div class="desc">Tablero de control de Presupuesto de la VP de AI&amp;AA.</div>
+      <span class="badge">Publicado · automatizado</span>
+      <div class="actions">
+        <a class="btn" href="https://jamissdj.github.io/dashboard-vp-ai/" target="_blank" rel="noopener">Abrir tablero ↗</a>
+        <a class="btn repo" href="https://github.com/jamissdj/dashboard-vp-ai" target="_blank" rel="noopener">Repo</a>
+      </div>
+    </div>
+
+    <!-- Vacaciones -->
+    <div class="card">
+      <div class="top">
+        <div class="icon">🏖️</div>
+        <div><h2>Vacaciones Leal</h2></div>
+      </div>
+      <div class="desc">Tablero de consulta — Vacaciones de empleados y contratistas Leal.</div>
+      <span class="badge">Publicado · automatizado</span>
+      <div class="actions">
+        <a class="btn" href="https://jamissdj.github.io/VacacionesLeal/Index_Vacaciones.html" target="_blank" rel="noopener">Abrir tablero ↗</a>
+        <a class="btn repo" href="https://github.com/jamissdj/VacacionesLeal" target="_blank" rel="noopener">Repo</a>
+      </div>
+    </div>
+
+    <!-- Referidos -->
+    <div class="card">
+      <div class="top">
+        <div class="icon">🤝</div>
+        <div><h2>Referidos Leal</h2></div>
+      </div>
+      <div class="desc">Base de datos y seguimiento de referidos del talento Leal.</div>
+      <span class="badge">Publicado · automatizado</span>
+      <div class="actions">
+        <a class="btn" href="https://jamissdj.github.io/ReferidosLeal/" target="_blank" rel="noopener">Abrir tablero ↗</a>
+        <a class="btn repo" href="https://github.com/jamissdj/ReferidosLeal" target="_blank" rel="noopener">Repo</a>
+      </div>
+    </div>
+
+    <!-- Data Engineering -->
+    <div class="card">
+      <div class="top">
+        <div class="icon">📈</div>
+        <div><h2>Data Engineering LLA</h2></div>
+      </div>
+      <div class="desc">Dashboard Data Engineering LLA (Análisis Q1 2026).</div>
+      <span class="badge">Publicado · automatizado</span>
+      <div class="actions">
+        <a class="btn" href="https://jamissdj.github.io/dashboard-de-lla/" target="_blank" rel="noopener">Abrir tablero ↗</a>
+        <a class="btn repo" href="https://github.com/jamissdj/dashboard-de-lla" target="_blank" rel="noopener">Repo</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    Generado para Jamis Garzón · GitHub: <strong>jamissdj</strong><br>
+    Actualiza esta biblioteca cuando agregues o cambies un tablero.
+  </footer>
+</div>
+</body>
+</html>
